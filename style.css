@@ -1,0 +1,125 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.light-mode{
+    background-color: aliceblue;
+    color: #333;
+}
+
+.dark-mode .chat-container{
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background-color: #171717;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: width 0.3s;
+}
+
+.light-mode.sidebar{
+    background-color: #f5f5f5;
+}
+
+.sidebar .collapsed{
+    width: 50px;
+}
+
+.tooltip{
+    position: absolute;
+    top: 0;
+    right: -20px;
+}
+
+.tooltip.tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50;
+    margin-left: -60px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#sidebar-toggle{
+    background-color: transparent;
+    margin: -22;
+    align-items: center;
+    margin-top: 600%;
+}
+
+.tooltip.tooltip::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-content{
+    padding-top: 20px;
+    transition: 0.3s;
+}
+
+.sidebar.collapsed.sidebar-content{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.conversation-list{
+    padding: 0 20px;
+}
+
+.conversation{
+    margin-bottom: 10px;
+}
+
+.conversation-text{
+    font-weight: bold;
+    color: #fff;
+}
+
+.conversation-content{
+    color: #ddd;
+}
+
+#new-conversation-btn{
+    background-color: #3a3b3b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#new-conversation-btn:hover{background-color: #242020;}
+
+.chat-container{
+    
+}
+
